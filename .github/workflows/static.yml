@@ -27,7 +27,8 @@ jobs:
             ctest -E "test-tdutils|test-tonlib-offline"
             popd
 
-            cmake --install build --prefix install'
+            cmake --install build --prefix install
+            ./packages/deb.sh install packages/deb/ton'
     - name: Upload artifacts
       uses: actions/upload-artifact@master
       with:
