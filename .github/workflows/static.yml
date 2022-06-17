@@ -23,8 +23,7 @@ jobs:
 
             pushd build
             # test-tdutils: locale trouble w/static build
-            # test-tonlib-offline: XXX
-            ctest -E "test-tdutils|test-tonlib-offline"
+            ctest -E "test-tdutils"
             popd
 
             cmake --install build --prefix install

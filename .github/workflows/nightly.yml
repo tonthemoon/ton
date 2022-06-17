@@ -23,8 +23,7 @@ jobs:
             cmake --build build -j4
 
             pushd build
-            # test-tonlib-offline: XXX
-            ctest -E "test-tonlib-offline"
+            ctest
             popd
 
             cmake --install build --prefix install'
