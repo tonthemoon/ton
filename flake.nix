@@ -44,8 +44,10 @@
             "-DCMAKE_LINK_SEARCH_END_STATIC=ON"
           ];
 
-          LDFLAGS =
-            optional staticExternalDeps "-static-libgcc -static-libstdc++";
+          LDFLAGS = optional staticExternalDeps (concatStringsSep " " [
+            (optionalString stdenv.cc.isGNU "-static-libgcc")
+            "-static-libstdc++"
+          ]);
 
           postInstall = ''
             moveToOutput bin "$bin"
