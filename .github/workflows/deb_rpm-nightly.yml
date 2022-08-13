@@ -40,7 +40,6 @@ jobs:
     - run: |
         nix develop \
           --command bash -e -c '
-            mkdir packages-out
             ./packages/deb.sh packages-out $PWD/packages/deb/ton $PWD/result-aarch64* aarch64'
     - run: |
         nix develop \
