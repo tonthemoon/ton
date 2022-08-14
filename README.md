@@ -7,7 +7,7 @@ Main TON monorepo, which includes the code of the node/validator, lite-client, t
 ### deb
 
 ```sh
-echo 'deb [trusted=yes] https://tonthemoon.github.io/ton-repo/deb ./' > /etc/apt/sources.list.d/10-ton.list
+echo 'deb [trusted=yes] https://github.com/tonthemoon/ton/releases/download/nightly-deb ./' > /etc/apt/sources.list.d/10-ton.list
 ```
 
 ### rpm
@@ -16,7 +16,7 @@ echo 'deb [trusted=yes] https://tonthemoon.github.io/ton-repo/deb ./' > /etc/apt
 cat > /etc/yum.repos.d/ton.repo << EOF
 [ton]
 name=Ton
-baseurl=https://tonthemoon.github.io/ton-repo/rpm
+baseurl=https://github.com/tonthemoon/ton/releases/download/nightly-rpm
 enabled=1
 type=rpm
 gpgcheck=0
