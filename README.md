@@ -16,7 +16,7 @@ echo 'deb [trusted=yes] https://github.com/tonthemoon/ton/releases/download/nigh
 cat > /etc/yum.repos.d/ton.repo << EOF
 [ton]
 name=Ton
-baseurl=https://github.com/tonthemoon/ton/releases/download/nightly-rpm
+baseurl=https://tonthemoon.github.io/ton-repo/rpm
 enabled=1
 type=rpm
 gpgcheck=0
