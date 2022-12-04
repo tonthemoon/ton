@@ -35,7 +35,7 @@ jobs:
         name: ton-binaries
         path: result*
     - run: |
-        gh release delete -y nightly-brew
-        gh release create --notes "" nightly-brew packages-out/brew-install/*
+        gh release delete -y nightly-brew-"$(uname -m)"
+        gh release create --notes "" nightly-brew-"$(uname -m)" packages-out/brew-install/*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
